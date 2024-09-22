@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic List Rendering</title>
+  <style>
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 10px;
+      padding: 10px;
+    }
+    .image {
+      width: 100%;
+      height: auto;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    // Your ItemList component code will go here
+    function Image({ src }) {
+      return <img className="image" src={src} alt="" />;
+    }
+
+    function Gallery({ children }) {
+      return <div className="gallery">{children}</div>;
+    }
+
+    // Example usage
+    const App = () => (
+      <Gallery>
+        <Image src="https://www.casio.com/content/dam/casio/product-info/locales/in/en/timepiece/product/watch/M/MT/MTP/mtp-1302pd-4av/assets/MTP-1302PD-4AV.png" />
+        <Image src="https://www.casio.com/content/dam/casio/product-info/locales/in/en/timepiece/product/watch/M/MT/MTP/mtp-1302pd-4av/assets/MTP-1302PD-4AV.png" />
+        <Image src="https://www.casio.com/content/dam/casio/product-info/locales/in/en/timepiece/product/watch/M/MT/MTP/mtp-1302pd-4av/assets/MTP-1302PD-4AV.png" />
+        <Image src="https://www.casio.com/content/dam/casio/product-info/locales/in/en/timepiece/product/watch/M/MT/MTP/mtp-1302pd-4av/assets/MTP-1302PD-4AV.png" />
+      </Gallery>
+    );
+
+    ReactDOM.render(<App />, document.getElementById('root'));
+  
+  </script>
+</body>
+</html>

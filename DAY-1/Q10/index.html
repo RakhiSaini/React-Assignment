@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JSX and Babel</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      // Your JSX code here
+      const funNme = () => {
+        return (
+          <>
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUztoohtVAtrHx69rRnA2MdW1eFks1vzbZHdW9Mv18g8RQ_YCL5pOF9h278A&s"
+              alt=""
+            ></img>
+            <h1>Automatic Watch</h1>
+            <h2>$350.00 USD</h2>
+            <p style={{ color: "gray" }}>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
+              iusto dicta saepe doloribus, similique beatae distinctio fugiat
+              quibusdam quam nostrum, neque reprehenderit sint, quidem nihil
+              quas incidunt facilis? Maiores, quae.
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero,
+              dicta placeat fugiat, expedita necessitatibus dolores dolorum
+              blanditiis consectetur accusamus natus earum nihil, officiis harum
+              illum voluptate tenetur accusantium ad dignissimos.
+            </p>
+            <hr />
+
+            <b style={{ color: "rgb(255, 193, 7)" }}>FEATURES</b>
+            <li>Chronograph</li>
+            <li>Master Chronometer Certified</li>
+            <li>Tachymeter</li>
+            <li>Anti-Magnetic</li>
+            <li>Chronometer</li>
+            <li>Small Seconds</li>
+
+            <hr />
+
+            <b style={{ color: "rgb(255, 193, 7)" }}>PRODUCT DETAILS</b>
+            <p>
+              <b>Between lugs: </b>20 mm
+            </p>
+            <p>
+              <b>Bracelet: </b>leather strap
+            </p>
+            <p>
+              <b>Case:</b> Steel
+            </p>
+            <p>
+              <b>Case Diameter: </b>42mm
+            </p>
+            <p>
+              <b>Dial Color: </b>Black
+            </p>
+            <p>
+              <b>Crystal: </b>Domed,scratch-resistant sapphire crystal with
+              anti-reflective treatment inside{" "}
+            </p>
+            <p>
+              <b>Water resistance: </b>5 bar (50 meter / 167 feet){" "}
+            </p>
+            <button
+              style={{ width: "100%", background: "black", color: "white" }}
+            >
+              ADD TO CART{" "}
+            </button>
+            <p style={{ textAlign: "center" }}>2-3 business days delivery </p>
+          </>
+        );
+      };
+      const root = ReactDOM.createRoot(document.getElementById("root")).render(
+        funNme()
+      );
+    </script>
+  </body>
+</html>

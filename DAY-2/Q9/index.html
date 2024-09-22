@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Components in React</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+    .container {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+      background-color: #fff;
+    }
+    .header {
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .steps {
+      margin-top: 20px;
+      display: flex;
+      /* margin: auto; */
+    }
+    .step {
+      margin: 10px 0;
+      padding: 15px;
+      border-radius: 5px;     
+    }
+    .step-title {
+      font-weight: bold;
+      font-size: 18px;
+      color: black;
+      
+    }
+    .step-description {
+      margin-top: 5px;
+      color: #6c6a6ac2;
+    }
+    .step-number{
+        background-color: aquamarine;
+        width:25px;
+        text-align: center;
+        margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    // Write your code here
+
+    const Header = () => (
+      <div className="header">Getting started in 3 easy steps</div>
+    );
+
+    const Step = ({ number, title, description }) => (
+      <div className="step">
+        <div className="step-number">{number}</div>
+        <div className="step-title"> {title}</div>
+        <div className="step-description">{description}</div>
+      </div>
+    );
+
+    const Steps = () => (
+      <div className="steps">
+        <Step 
+          number="01." 
+          title="Find your template" 
+          description="Every template is embedded within an iframe, so you can easily check what they look like and test the responsive behaviour." 
+        />
+        <Step 
+          number="02." 
+          title="Copy the code" 
+          description="Click the code tab to see the actual source code of the template. Copy and paste it into your project and adjust it to your needs." 
+        />
+        <Step 
+          number="03." 
+          title="Enjoy your free time" 
+          description="You've just saved yourself a bunch of time not building the same stuff over and over again. Enjoy your free time, and build business features." 
+        />
+      </div>
+    );
+
+    const App = () => (
+      <div className="container">
+        <Header />
+        <Steps />
+      </div>
+    );
+
+    ReactDOM.render(<App />, document.getElementById('root'));
+  </script>
+</body>
+</html>

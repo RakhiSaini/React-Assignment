@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Right Plan for Your Business</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+    .container {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+      background-color: #fff;
+    }
+    .header {
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 10px;
+      display: flex;
+    }
+    .description {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #555;
+        display: flex;
+    }
+    .plans {
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .plan {
+      padding: 15px;
+      margin: 10px;
+      flex: 1 1 30%;
+      background-color: #e7f3ff;
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+    }
+    .plan-title {
+      font-weight: bold;
+      font-size: 20px;
+      color: black;
+    }
+    .plan-price {
+      font-size: 24px;
+      margin: 10px 0;
+      color: #333;
+      
+    }
+    .get-started {
+      background-color: #bd64d9;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .get-started:hover {
+      background-color: #acabad;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    // Step 1: Define the components
+    const Header = () => (
+      <div className="header">The Right Plan for <br /> Your Business</div>
+    );
+
+    const Description = () => (
+      <div className="description">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam quod in iure vero. Facilis magnam, sed officiis commodi labore odit.
+      </div>
+    );
+    
+    <hr/>
+
+    const Plan = ({ title, price, list, buttonText }) => (
+      <div className="plan">
+        <div className="plan-title">{title}</div>
+        <div className="plan-list">{list}</div>
+        <div className="plan-price">{price}</div>
+        <button className="get-started">{buttonText}</button>
+      </div>
+    );
+     
+
+    const Plans = () => (
+      <div className="plans">
+        <Plan 
+          title="Starter" 
+          list = "1 lorem ipsum Lorem ipsum dolor Monthly Updates"
+          price="Free" 
+          buttonText="Get Started" 
+        />
+        <Plan 
+          title="Plus" 
+          list="1 lorem ipsum Lorem, ipsum dolor. Monthly Updates." 
+          price="$32.00" 
+          buttonText="Get Started" 
+        />
+        <Plan 
+          title="Pro" 
+          list="1 lorem ipsum Lorem, ipsum dolor. Monthly Updates." 
+          price="$50.00" 
+          buttonText="Get Started" 
+        />
+      </div>
+    );
+
+    const App = () => (
+      <div className="container">
+        <Header />
+        <Description />
+        <Plans />
+    </div>
+       
+    );
+
+    ReactDOM.render(<App />, document.getElementById('root'));
+  </script>
+</body>
+</html>

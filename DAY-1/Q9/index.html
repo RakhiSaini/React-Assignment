@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JSX and Babel</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      // Your JSX code here
+      function Email() {
+        return (
+          <React.Fragment>
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMhWYV4puIr0wPPxxX_2Zp9r1j3hzAGmhlN0Zaz7vANl3gYlM_PLPHJdJGRAt_WD1K-Ew&usqp=CAU"
+              alt=""
+            ></img>
+            <h1>SUBSCRIBE</h1>
+            <p>Subscribe to our newsletter & stay upto date!</p>
+            <div className="main">
+              <input type="email" placeholder="john@deo.net" />
+              <button
+                className="btn"
+                style={{ background: "skyblue", margin: "10px" }}
+              >
+                Subscribe
+              </button>
+            </div>
+          </React.Fragment>
+        );
+      }
+      const root = ReactDOM.createRoot(document.getElementById("root")).render(
+        <Email />
+      );
+
+      //code by raj..............
+      // const Ui = function (){
+      //     return (
+      //         <>
+      //         <div classname = "Ui">
+      //             <img src="data:image/png;base64,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"></img>
+      //             <h1 classname ="Subscribe">SUBSCRIBE</h1>
+      //             <h4 classname="heading">Subscribe to our newsletters & stay up to date!</h4>
+      //             <input placeholder="john@doe.net"></input>
+      //             <button classname ="subbutton">Subscribe</button>
+      //             </div>
+      //         </>
+      //     )
+      // }
+      // const root = ReactDOM.createRoot(document.getElementById("root")).render(<Ui></Ui>);
+    </script>
+  </body>
+</html>

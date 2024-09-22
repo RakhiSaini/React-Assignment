@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JSX and Babel</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      // Your JSX code here
+
+      // code by raj.........
+
+      // function click()
+      //    {
+      //     alert("Hello");
+      //    };
+
+      //   function Display(){
+      //     return (
+      //         <>
+      //         <p>React is a javascript Library</p>
+      //         <div className="main" style={{padding:'10px',border: '1px  solid black'}}>
+      //             <p>Click the below button to alert hello </p>
+      //             <button onClick={click}>Alert Hello</button>
+      //          </div>
+      //         </>
+      //     );
+      //   };
+
+      //   const root = ReactDOM.createRoot(document.getElementById("root")).render(<Display/>)
+
+      // by raj given code modified by me........
+      function click() {
+        alert("Hello");
+      }
+
+      function Display() {
+        return (
+          <React.Fragment>
+            <p>React is a JavaScript Library</p>
+            <div
+              className="main"
+              style={{ padding: "10px", border: "1px solid black" }}
+            >
+              <p>Click the below button to alert hello</p>
+              <button onClick={click}>Alert Hello</button>
+            </div>
+          </React.Fragment>
+        );
+      }
+
+      const root = ReactDOM.createRoot(document.getElementById("root")).render(
+        <Display />
+      );
+
+      // const MyComponent = () => {
+      //   return (
+      //     <>
+      //       <p>React is a javascript library</p>
+      //       <div className="main">
+      //         <p>Click the below button to alert 'Hello'</p>
+      //         <button onClick={() => alert('Hello')}>Alert Hello</button>
+      //       </div>
+      //     </>
+      //   );
+      // };
+
+      // const root = ReactDOM.createRoot(document.getElementById("root")).render(<MyComponent />);
+    </script>
+  </body>
+</html>
