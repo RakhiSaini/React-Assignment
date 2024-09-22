@@ -1,0 +1,29 @@
+.form-app {
+  margin-left: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #a1deb0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+input {
+  margin: 5px 0;
+  padding: 10px;
+  font-size: 16px;
+  display: flex;
+}
+
+button {
+  margin: auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
